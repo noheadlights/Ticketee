@@ -7,6 +7,8 @@ gem 'rails', '3.2.8'
 
 gem 'sqlite3'
 
+gem 'dynamic_form'
+
 group :development, :test do
   gem "rspec-rails"
   gem "spork"
