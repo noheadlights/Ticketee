@@ -7,6 +7,17 @@ gem 'rails', '3.2.8'
 
 gem 'sqlite3'
 
+group :development, :test do
+  gem "rspec-rails"
+  gem "spork"
+end
+
+group :test do
+  gem "cucumber-rails", "1.0.6"
+  gem "capybara"
+  gem 'database_cleaner'
+end
+
 
 # Gems used only for assets and not required
 # in production environments by default.
