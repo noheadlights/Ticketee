@@ -5,6 +5,7 @@ class TicketsController < ApplicationController
   def new
     @ticket = @project.tickets.build
   end
+
   def create
     @ticket = @project.tickets.build(params[:ticket])
     if @ticket.save
@@ -15,10 +16,26 @@ class TicketsController < ApplicationController
       render action: "new"
     end
   end
+
   def show
   end
 
+  def update
+    if @ticket.update_attributes(params[:ticket])
+      flash[:notice] = "Ticket has been updated."
+      redirect_to project_ticket_path(@project, @ticket)
+    else
+      flash[:alert] = "Ticket has not been updated."
+      render action: "edit"
+    end
+  end
+
+  def edit
+
+  end
+
   private
+
     def find_project
       @project = Project.find(params[:project_id])
     end
