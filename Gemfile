@@ -8,7 +8,7 @@ gem 'rails', '3.2.8'
 gem 'pg'
 gem 'rake', '0.9.3.beta.1'
 gem 'dynamic_form'
-
+gem 'devise'
 
 group :development, :test do
   gem "rspec-rails"

@@ -43,6 +43,7 @@ class TicketsController < ApplicationController
     def find_project
       @project = Project.find(params[:project_id])
     end
+
     def find_ticket
       @ticket = @project.tickets.find(params[:id])
     end
