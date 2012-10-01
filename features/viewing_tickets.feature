@@ -6,8 +6,8 @@ Feature: Viewing Tickets
 Background:
   Given there is a project called "TextMate 2"
   And that project has a ticket:
-  | title                   | description                   |
-  | Make it shiny!          | Gradients! Starbursts! Oh my! |
+    | title                   | description                   |
+    | Make it shiny!          | Gradients! Starbursts! Oh my! |
   And there is a project called "Internet Explorer"
   And that project has a ticket:
     | title                 | description                   |
